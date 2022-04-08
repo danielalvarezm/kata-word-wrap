@@ -10,9 +10,13 @@ const wrapLine = (line: string, limit: number): string => {
   return line.slice(0, spaceIndex) + '\n' + wrapLine(line.slice(spaceIndex + 1), limit);
 };
 
-const checkSyntax = (_lines: string, limit: number): void => { 
+const checkSyntax = (lines: string, limit: number): void => { 
   if (limit < 1) {
     throw new Error('Limit must be greater than 0');
+  }
+
+  if (lines === '') {
+    throw new Error('Input cannot be empty');
   }
 };
 
