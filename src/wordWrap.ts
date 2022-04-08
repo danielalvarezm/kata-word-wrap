@@ -1,3 +1,3 @@
-export const wordWrap = (_lines: string, _limit: number): string => {
-    return '';
+export const wordWrap = (lines: string, _limit: number): string => {
+    return lines;
 };
