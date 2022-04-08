@@ -22,4 +22,9 @@ describe('The word wrap kata should', () => {
     expect(wordWrap('Hello\nsunny world', 7)).toBe('Hello\nsunny\nworld');
     expect(wordWrap('This is\nan example\ntest', 4)).toBe('This\nis\nan\nexam\nple\ntest');
   });
+
+  it('not accept limits smaller than 1', () => {
+    expect(wordWrap('Hello world', 0)).toThrowError('Limit must be greater than 0');
+    expect(wordWrap('Hello world', -1)).toThrowError('Limit must be greater than 0');
+  });
 });
