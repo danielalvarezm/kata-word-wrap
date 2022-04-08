@@ -27,4 +27,8 @@ describe('The word wrap kata should', () => {
     expect(() => wordWrap('Hello world', 0)).toThrowError('Limit must be greater than 0');
     expect(() => wordWrap('Hello world', -1)).toThrowError('Limit must be greater than 0');
   });
+
+  it('not accept an empty string', () => {
+    expect(() => wordWrap('', 1)).toThrowError('Input cannot be empty');
+  });
 });
