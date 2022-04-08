@@ -8,6 +8,11 @@ describe("The word wrap kata should", () => {
 
   it("break lines longer than the limit", () => {
     expect(wordWrap('Hello', 3)).toBe('Hel\nlo');
-    expect(wordWrap('This is an example', 13)).toBe('This is an ex\nample');
+    expect(wordWrap('Hellooooo', 3)).toBe('Hel\nloo\nooo');
+  });
+
+  it("prefer breaking lines by a space", () => {
+    expect(wordWrap('Hello word', 7)).toBe('Hello\nword');
+    expect(wordWrap('This is an example', 6)).toBe('This\nis an\nexample');
   });
 });
