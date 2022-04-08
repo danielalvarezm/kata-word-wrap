@@ -13,6 +13,6 @@ describe("The word wrap kata should", () => {
 
   it("prefer breaking lines by a space", () => {
     expect(wordWrap('Hello word', 7)).toBe('Hello\nword');
-    expect(wordWrap('This is an example', 6)).toBe('This\nis an\nexample');
+    expect(wordWrap('This is an example', 7)).toBe('This\nis an\nexample');
   });
 });
