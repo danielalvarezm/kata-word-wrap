@@ -24,7 +24,7 @@ describe('The word wrap kata should', () => {
   });
 
   it('not accept limits smaller than 1', () => {
-    expect(wordWrap('Hello world', 0)).toThrowError('Limit must be greater than 0');
-    expect(wordWrap('Hello world', -1)).toThrowError('Limit must be greater than 0');
+    expect(() => wordWrap('Hello world', 0)).toThrowError('Limit must be greater than 0');
+    expect(() => wordWrap('Hello world', -1)).toThrowError('Limit must be greater than 0');
   });
 });
